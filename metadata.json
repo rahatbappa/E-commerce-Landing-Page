@@ -1,0 +1,8 @@
+{
+  "name": "Phone Funnel Pro - WordPress Landing Page Builder",
+  "description": "A professional WordPress Plugin Admin Dashboard for small shop owners. Built to design custom self-hosted landing pages, manage 1-click order checkout leads, configure Pathao & Steadfast shipping APIs, and download ready-to-deploy zip plugin & Elementor files.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

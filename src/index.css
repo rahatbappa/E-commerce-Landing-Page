@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@theme {
+  --font-sans: "Inter", "Hind Siliguri", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 35s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Custom scroll bar for logs and codes */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4f46e5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4338ca;
+}
+
+/* Pulse animation for buy buttons */
+@keyframes buy-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.7);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px 10px rgba(79, 70, 229, 0);
+  }
+}
+
+.animate-pulse-cta {
+  animation: buy-pulse 2s infinite ease-in-out;
+}
+
+/* Premium gradient borders */
+.border-gradient-orange {
+  border-image: linear-gradient(to right, #ea580c, #f59e0b) 1;
+}
+
+/* Zoom effect on image hover */
+.zoom-img-container {
+  overflow: hidden;
+}
+.zoom-img-container img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.zoom-img-container:hover img {
+  transform: scale(1.08);
+}
